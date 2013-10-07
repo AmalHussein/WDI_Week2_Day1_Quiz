@@ -1,4 +1,4 @@
-# Week2 Day 1 Grocery Store Order tracker
+ # Week2 Day 1 Grocery Store Order tracker
 
 ###Type:
 - Quiz

@@ -1,4 +1,4 @@
-require_relative '<f../lib/product_type>'
+require_relative '<product_type>'
 
 # Order Item:
 
@@ -7,16 +7,19 @@ require_relative '<f../lib/product_type>'
 # An order item should have a unit price (this may be different than the product price
 
 class OrderItem
- 	attr_accessor :product , :quantity , :unit_price
+ 	attr_accessor :product_type , :quantity , :unit_price
  	
- 	def initialize (product , quantity, unit_price)
- 	@product = []
- 	@quantity = quantity.to_i
- 	@unit_price = unit_price.to_i
+ 	def initialize(product_type, quantity, unit_price)
+ 	@product_type = product_type
+ 	@quantity = quantity
+ 	@unit_price = unit_price
  	end
 
   def to_s
     "product type: #{@product}, quantity: #{@quantity}, unit_price: #{@unit_price}"
   end
   
+  def price
+  	@quantity*@unit_price
+  end 
 end

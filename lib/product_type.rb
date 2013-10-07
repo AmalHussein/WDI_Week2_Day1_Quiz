@@ -9,10 +9,15 @@
 
 
 class ProductType
-  attr_accessor :id, :name, :price 
+  attr_accessor :id, :name, :price, :description
 
-  def initialize (id, name, price)
-  	@id = id
-  	@name = name.to_s
-  	@price = price.to_f
+	 def initialize(id, name, price,description="thing")
+	  	@id = id
+	  	@name = name
+	  	@price = price
+	  	@description = description
+	end
+
 end
+
+
